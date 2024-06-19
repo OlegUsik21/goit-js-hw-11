@@ -7,7 +7,7 @@ import "izitoast/dist/css/iziToast.min.css";
 import { getImages } from "./js/pixabay-api";
 import { galleryTemplate, showLoader, hideLoader } from "./js/render-functions";
 
-const message ='Sorry, there are no images matching your search query. Please, try again!';
+const message = "Sorry, there are no images matching your search query. Please try again!";
 
 const lightBox = new SimpleLightbox('.gallery a', {});
 
@@ -28,6 +28,6 @@ function formSubmit(event) {
             gallery.innerHTML = markup;
             lightBox.refresh();
         })
-        .catch(error => console.log(error))
+        .catch(()=>{})
         .finally(() => { hideLoader() });
 }
