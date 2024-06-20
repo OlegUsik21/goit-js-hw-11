@@ -28,6 +28,8 @@ function formSubmit(event) {
             gallery.innerHTML = markup;
             lightBox.refresh();
         })
-        .catch(()=>{})
+        .catch((error) => {
+            iziToast.show({message: error.message});
+    })
         .finally(() => { hideLoader() });
 }
